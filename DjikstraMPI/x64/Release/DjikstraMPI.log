@@ -1,0 +1,6 @@
+﻿  Source.cpp
+  Generating code
+  Compiler switch has changed, fall back to full compilation.
+  All 15 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  DjikstraMPI.vcxproj -> C:\dev\DjikstraMPI\DjikstraMPI\x64\Release\DjikstraMPI.exe
