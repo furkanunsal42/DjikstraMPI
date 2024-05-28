@@ -2,3 +2,5 @@
 *.vsidx
 *.lock
 /DjikstraMPI/.vs
+/DjikstraMPI/Debug
+/DjikstraMPI/x64/Debug

@@ -127,6 +127,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>MPICH_SKIP_MPICXX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,10 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MultiThreaded</RuntimeLibrary>
-      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MultiThreadedDebug</RuntimeLibrary>
-    </ClCompile>
+    <ClCompile Include="djikstra_mpi.cpp" />
+    <ClCompile Include="djikstra_omp.cpp" />
+    <ClCompile Include="mpi_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="djikstra_mpi.h" />
+    <ClInclude Include="djikstra_omp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
